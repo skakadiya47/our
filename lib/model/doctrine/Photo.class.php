@@ -153,11 +153,8 @@ class Photo extends BasePhoto
         $big_photo_height   =  369;
         $middle_photo_width =  96;
         $middle_photo_height =  138;
-
+	$uploadDir = sfConfig::get ( 'sf_upload_dir' );
         if(file_exists($uploadDir . '/photo/original/' . $value)) {
-
-
-            $uploadDir = sfConfig::get ( 'sf_upload_dir' );
             $img_small = new sfImage( $uploadDir . '/photo/original/' . $value,null);
             $img_middle = new sfImage( $uploadDir . '/photo/original/' . $value,null);
             $img_big = new sfImage( $uploadDir . '/photo/original/' . $value,null);
